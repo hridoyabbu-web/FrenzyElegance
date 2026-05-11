@@ -1,580 +1,482 @@
-<!DOCTYPE html>
+Delete <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Frenzy Elegance | Women's Fashion</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frenzy Elegance</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
 
-  <style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:'Poppins',sans-serif;
-    }
+body{
+background:#f8f5f1;
+color:#111;
+}
 
-    body{
-      background:#f8f3ef;
-      color:#222;
-      overflow-x:hidden;
-    }
+/* NAVBAR */
 
-    header{
-      width:100%;
-      min-height:100vh;
+nav{
+position:fixed;
+top:0;
+width:100%;
+padding:18px 7%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(255,255,255,0.85);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
 
-      background:
-      linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),
-      url('https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=2080&auto=format&fit=crop');
+.logo{
+font-size:26px;
+font-weight:700;
+letter-spacing:2px;
+}
 
-      background-size:cover;
-      background-position:center;
-      display:flex;
-      flex-direction:column;
-    }
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
 
-    nav{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:25px 8%;
-    }
+nav ul li a{
+text-decoration:none;
+color:#111;
+font-weight:500;
+}
 
-    .logo{
-      color:white;
-      font-size:30px;
-      font-weight:700;
-      letter-spacing:3px;
-    }
+/* HERO */
 
-    .nav-links{
-      display:flex;
-      gap:30px;
-    }
+.hero{
+height:100vh;
+background:url('images/hero.jpg') center/cover no-repeat;
+display:flex;
+align-items:center;
+padding:0 7%;
+position:relative;
+}
 
-    .nav-links a{
-      text-decoration:none;
-      color:white;
-      font-size:15px;
-      transition:0.3s;
-    }
+.hero::after{
+content:'';
+position:absolute;
+inset:0;
+background:rgba(0,0,0,0.35);
+}
 
-    .nav-links a:hover{
-      color:#f0c6b4;
-    }
+.hero-content{
+position:relative;
+z-index:2;
+color:white;
+max-width:550px;
+}
 
-    .hero{
-      flex:1;
-      display:flex;
-      align-items:center;
-      padding:0 8%;
-    }
+.hero-content h1{
+font-size:58px;
+line-height:1.1;
+margin-bottom:20px;
+}
 
-    .hero-content{
-      max-width:600px;
-      color:white;
-    }
+.hero-content p{
+font-size:17px;
+margin-bottom:30px;
+color:#eee;
+}
 
-    .hero-content h1{
-      font-size:70px;
-      line-height:1.1;
-      margin-bottom:20px;
-    }
+.btn{
+display:inline-block;
+padding:14px 34px;
+background:white;
+color:black;
+border-radius:40px;
+text-decoration:none;
+font-weight:600;
+}
 
-    .hero-content p{
-      font-size:18px;
-      line-height:1.8;
-      margin-bottom:30px;
-    }
+/* PRODUCTS */
 
-    .btn{
-      display:inline-block;
-      padding:14px 34px;
-      background:#d3a28f;
-      color:white;
-      text-decoration:none;
-      border-radius:40px;
-      transition:0.3s;
-      font-weight:500;
-    }
+.products{
+padding:100px 7%;
+}
 
-    .btn:hover{
-      background:#bb866f;
-    }
+.section-title{
+font-size:40px;
+margin-bottom:50px;
+text-align:center;
+}
 
-    .section{
-      padding:90px 8%;
-    }
+.product-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+}
 
-    .section-title{
-      text-align:center;
-      margin-bottom:60px;
-    }
+.card{
+background:white;
+border-radius:22px;
+overflow:hidden;
+transition:0.3s;
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
 
-    .section-title h2{
-      font-size:45px;
-      margin-bottom:10px;
-    }
+.card:hover{
+transform:translateY(-8px);
+}
 
-    .section-title p{
-      color:#777;
-    }
+.card img{
+width:100%;
+height:420px;
+object-fit:cover;
+}
 
-    .products{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:30px;
-    }
+.card-content{
+padding:18px;
+}
 
-    .product-card{
-      background:white;
-      border-radius:20px;
-      overflow:hidden;
-      box-shadow:0 10px 30px rgba(0,0,0,0.06);
-      transition:0.4s;
-    }
+.product-name{
+font-size:20px;
+font-weight:600;
+margin-bottom:8px;
+}
 
-    .product-card:hover{
-      transform:translateY(-10px);
-    }
+.price{
+font-size:18px;
+font-weight:700;
+margin-bottom:12px;
+}
 
-    .product-card img{
-      width:100%;
-      height:350px;
-      object-fit:cover;
-    }
+/* COLORS */
 
-    .product-info{
-      padding:20px;
-    }
+.colors{
+display:flex;
+gap:8px;
+margin-bottom:15px;
+}
 
-    .product-info h3{
-      font-size:22px;
-      margin-bottom:10px;
-    }
+.color{
+width:22px;
+height:22px;
+border-radius:50%;
+border:2px solid #ddd;
+}
 
-    .price{
-      color:#c18f7a;
-      font-size:18px;
-      margin-bottom:10px;
-    }
+/* SIZES */
 
-    .rating{
-      color:#f4b400;
-      margin-bottom:15px;
-    }
+.sizes{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+}
 
-    select{
-      width:100%;
-      padding:12px;
-      border-radius:12px;
-      border:1px solid #ddd;
-      margin-bottom:18px;
-      outline:none;
-    }
+.size-box{
+border:1px solid #ddd;
+border-radius:10px;
+padding:6px 10px;
+text-align:center;
+font-size:13px;
+min-width:52px;
+}
 
-    .about{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-      gap:50px;
-      align-items:center;
-    }
+.size-box span{
+display:block;
+font-size:11px;
+color:#777;
+margin-top:2px;
+}
 
-    .about img{
-      width:100%;
-      border-radius:20px;
-    }
+/* FOOTER */
 
-    .about-text h2{
-      font-size:45px;
-      margin-bottom:20px;
-    }
+footer{
+padding:40px;
+text-align:center;
+background:#111;
+color:white;
+margin-top:80px;
+}
 
-    .about-text p{
-      color:#666;
-      line-height:1.8;
-      margin-bottom:20px;
-    }
+/* MOBILE */
 
-    .payment-box{
-      display:flex;
-      flex-wrap:wrap;
-      gap:20px;
-      justify-content:center;
-    }
+@media(max-width:1000px){
 
-    .pay{
-      background:white;
-      padding:15px 30px;
-      border-radius:50px;
-      box-shadow:0 10px 25px rgba(0,0,0,0.06);
-      font-weight:600;
-    }
+.product-grid{
+grid-template-columns:repeat(2,1fr);
+}
 
-    .banner{
-      height:60vh;
+.hero-content h1{
+font-size:42px;
+}
 
-      background:
-      linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),
-      url('https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=2080&auto=format&fit=crop');
+}
 
-      background-size:cover;
-      background-position:center;
+@media(max-width:650px){
 
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      color:white;
-      padding:20px;
-    }
+nav ul{
+display:none;
+}
 
-    .banner h2{
-      font-size:55px;
-      max-width:800px;
-    }
+.product-grid{
+grid-template-columns:1fr;
+}
 
-    footer{
-      background:#1f1f1f;
-      color:white;
-      padding:70px 8% 30px;
-    }
+.hero-content h1{
+font-size:34px;
+}
 
-    .footer-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-      gap:40px;
-      margin-bottom:40px;
-    }
+.card img{
+height:380px;
+}
 
-    .footer-col h3{
-      margin-bottom:20px;
-    }
+}
 
-    .footer-col a{
-      display:block;
-      color:#ccc;
-      text-decoration:none;
-      margin-bottom:10px;
-    }
-
-    .footer-col a:hover{
-      color:#f0c6b4;
-    }
-
-    .copyright{
-      text-align:center;
-      border-top:1px solid rgba(255,255,255,0.1);
-      padding-top:20px;
-      color:#aaa;
-    }
-
-    .whatsapp-btn{
-      position:fixed;
-      right:20px;
-      bottom:20px;
-      background:#25D366;
-      color:white;
-      text-decoration:none;
-      padding:14px 22px;
-      border-radius:50px;
-      font-weight:600;
-      z-index:999;
-      box-shadow:0 10px 25px rgba(0,0,0,0.15);
-    }
-
-    @media(max-width:768px){
-
-      nav{
-        flex-direction:column;
-        gap:20px;
-      }
-
-      .hero-content h1{
-        font-size:45px;
-      }
-
-      .banner h2{
-        font-size:35px;
-      }
-
-    }
-
-  </style>
+</style>
 </head>
-
 <body>
 
-<header>
+<nav>
+<div class="logo">FRENZY ELEGANCE</div>
 
-  <nav>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Collection</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</nav>
 
-    <div class="logo">
-      FRENZY ELEGANCE
-    </div>
+<section class="hero">
 
-    <div class="nav-links">
-      <a href="#">Home</a>
-      <a href="#">Collection</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-    </div>
+<div class="hero-content">
+<h1>Elegant Fashion<br>For Every Woman</h1>
 
-  </nav>
+<p>
+Discover premium dresses crafted for elegance,
+comfort and timeless beauty.
+</p>
 
-  <div class="hero">
-
-    <div class="hero-content">
-
-      <h1>
-        Elegant Fashion For Every Woman
-      </h1>
-
-      <p>
-        Discover soft feminine fashion crafted for confidence,
-        comfort, and timeless beauty.
-      </p>
-
-      <a href="#" class="btn">
-        Shop Now
-      </a>
-
-    </div>
-
-  </div>
-
-</header>
-
-<section class="section">
-
-  <div class="section-title">
-    <h2>New Collection</h2>
-    <p>Premium feminine outfits for modern women</p>
-  </div>
-
-  <div class="products">
-
-    <!-- Product 1 -->
-
-    <div class="product-card">
-
-      <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1887&auto=format&fit=crop">
-
-      <div class="product-info">
-
-        <h3>Elegant Satin Dress</h3>
-
-        <div class="price">
-          ৳ 2,490
-        </div>
-
-        <div class="rating">
-          ★★★★★ (4.9)
-        </div>
-
-        <select>
-          <option>Select Size</option>
-          <option>S</option>
-          <option>M</option>
-          <option>L</option>
-          <option>XL</option>
-          <option>XXL</option>
-        </select>
-
-        <a href="https://wa.me/8801XXXXXXXXX" class="btn">
-          Order on WhatsApp
-        </a>
-
-      </div>
-
-    </div>
-
-    <!-- Product 2 -->
-
-    <div class="product-card">
-
-      <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=1887&auto=format&fit=crop">
-
-      <div class="product-info">
-
-        <h3>Soft Beige Kurti</h3>
-
-        <div class="price">
-          ৳ 1,850
-        </div>
-
-        <div class="rating">
-          ★★★★★ (4.8)
-        </div>
-
-        <select>
-          <option>Select Size</option>
-          <option>S</option>
-          <option>M</option>
-          <option>L</option>
-          <option>XL</option>
-          <option>XXL</option>
-        </select>
-
-        <a href="https://wa.me/8801XXXXXXXXX" class="btn">
-          Order on WhatsApp
-        </a>
-
-      </div>
-
-    </div>
-
-    <!-- Product 3 -->
-
-    <div class="product-card">
-
-      <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1887&auto=format&fit=crop">
-
-      <div class="product-info">
-
-        <h3>Korean Style Top</h3>
-
-        <div class="price">
-          ৳ 1,290
-        </div>
-
-        <div class="rating">
-          ★★★★★ (5.0)
-        </div>
-
-        <select>
-          <option>Select Size</option>
-          <option>S</option>
-          <option>M</option>
-          <option>L</option>
-          <option>XL</option>
-          <option>XXL</option>
-        </select>
-
-        <a href="https://wa.me/8801XXXXXXXXX" class="btn">
-          Order on WhatsApp
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
+<a href="#" class="btn">Shop Now</a>
+</div>
 
 </section>
 
-<section class="section">
+<section class="products">
 
-  <div class="about">
+<h2 class="section-title">New Collection</h2>
 
-    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1887&auto=format&fit=crop">
+<div class="product-grid">
 
-    <div class="about-text">
+<!-- PRODUCT 1 -->
 
-      <h2>
-        About Frenzy Elegance
-      </h2>
+<div class="card">
 
-      <p>
-        Frenzy Elegance is a modern women's fashion brand focused on
-        aesthetic, elegant, and comfortable clothing.
-      </p>
+<img src="images/1.jpg">
 
-      <p>
-        We believe fashion should make every woman feel stylish,
-        confident, and beautiful.
-      </p>
+<div class="card-content">
 
-      <a href="#" class="btn">
-        Learn More
-      </a>
+<div class="product-name">
+Luxury Black Dress
+</div>
 
-    </div>
+<div class="price">
+৳ 1850
+</div>
 
-  </div>
+<div class="colors">
+<div class="color" style="background:black"></div>
+<div class="color" style="background:#8b0000"></div>
+<div class="color" style="background:#d4af37"></div>
+</div>
 
-</section>
+<div class="sizes">
 
-<section class="section">
+<div class="size-box">
+S
+<span>30</span>
+</div>
 
-  <div class="section-title">
-    <h2>Payment Methods</h2>
-    <p>Safe & Secure Payments</p>
-  </div>
+<div class="size-box">
+M
+<span>32</span>
+</div>
 
-  <div class="payment-box">
+<div class="size-box">
+L
+<span>36</span>
+</div>
 
-    <div class="pay">bKash</div>
-    <div class="pay">Nagad</div>
-    <div class="pay">Rocket</div>
-    <div class="pay">Cash On Delivery</div>
-    <div class="pay">Bank Transfer</div>
-    <div class="pay">PayPal</div>
-    <div class="pay">Binance Pay</div>
+<div class="size-box">
+XL
+<span>40</span>
+</div>
 
-  </div>
+</div>
 
-</section>
+</div>
+</div>
 
-<section class="banner">
+<!-- PRODUCT 2 -->
 
-  <h2>
-    Fashion That Defines Your Elegance
-  </h2>
+<div class="card">
+
+<img src="images/2.jpg">
+
+<div class="card-content">
+
+<div class="product-name">
+White Floral Dress
+</div>
+
+<div class="price">
+৳ 2200
+</div>
+
+<div class="colors">
+<div class="color" style="background:#fff"></div>
+<div class="color" style="background:pink"></div>
+<div class="color" style="background:#f5deb3"></div>
+</div>
+
+<div class="sizes">
+
+<div class="size-box">
+S
+<span>30</span>
+</div>
+
+<div class="size-box">
+M
+<span>32</span>
+</div>
+
+<div class="size-box">
+L
+<span>36</span>
+</div>
+
+<div class="size-box">
+XL
+<span>40</span>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<!-- PRODUCT 3 -->
+
+<div class="card">
+
+<img src="images/3.jpg">
+
+<div class="card-content">
+
+<div class="product-name">
+Royal Red Outfit
+</div>
+
+<div class="price">
+৳ 1990
+</div>
+
+<div class="colors">
+<div class="color" style="background:#8b0000"></div>
+<div class="color" style="background:#111"></div>
+<div class="color" style="background:#eee"></div>
+</div>
+
+<div class="sizes">
+
+<div class="size-box">
+S
+<span>30</span>
+</div>
+
+<div class="size-box">
+M
+<span>32</span>
+</div>
+
+<div class="size-box">
+L
+<span>36</span>
+</div>
+
+<div class="size-box">
+XL
+<span>40</span>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<!-- PRODUCT 4 -->
+
+<div class="card">
+
+<img src="images/4.jpg">
+
+<div class="card-content">
+
+<div class="product-name">
+Premium Yellow Dress
+</div>
+
+<div class="price">
+৳ 1750
+</div>
+
+<div class="colors">
+<div class="color" style="background:yellow"></div>
+<div class="color" style="background:#fff"></div>
+<div class="color" style="background:#111"></div>
+</div>
+
+<div class="sizes">
+
+<div class="size-box">
+S
+<span>30</span>
+</div>
+
+<div class="size-box">
+M
+<span>32</span>
+</div>
+
+<div class="size-box">
+L
+<span>36</span>
+</div>
+
+<div class="size-box">
+XL
+<span>40</span>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
 
 </section>
 
 <footer>
 
-  <div class="footer-grid">
-
-    <div class="footer-col">
-
-      <h3>FRENZY ELEGANCE</h3>
-
-      <p>
-        Elegant fashion designed for modern women.
-      </p>
-
-    </div>
-
-    <div class="footer-col">
-
-      <h3>Quick Links</h3>
-
-      <a href="#">Home</a>
-      <a href="#">Collection</a>
-      <a href="#">About</a>
-
-    </div>
-
-    <div class="footer-col">
-
-      <h3>Contact</h3>
-
-      <a href="#">WhatsApp</a>
-      <a href="#">Facebook</a>
-      <a href="#">Instagram</a>
-
-    </div>
-
-  </div>
-
-  <div class="copyright">
-    © 2026 Frenzy Elegance. All Rights Reserved.
-  </div>
+© 2026 Frenzy Elegance — Premium Fashion Collection
 
 </footer>
 
-<a href="https://wa.me/8801XXXXXXXXX" class="whatsapp-btn">
-  WhatsApp
-</a>
-
 </body>
-</html>
+  </html>
