@@ -1,482 +1,437 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Frenzy Elegance</title>
+export default function PremiumAIHomepage() { const features = [ 'AI Agents', 'Voice Assistant', 'Workflow Automation', 'Smart Memory', 'Realtime Analytics', 'Multi-Agent System', ];
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+const pricing = [ { title: 'Starter', price: '$29' }, { title: 'Pro', price: '$99' }, { title: 'Enterprise', price: 'Custom' }, ];
 
-<style>
+return ( <div className="min-h-screen bg-[#050816] text-white overflow-hidden"> {/* NAVBAR */} <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl border-b border-white/10 bg-black/20"> <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"> <h1 className="text-2xl font-bold">Nexus AI</h1>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
+<nav className="hidden md:flex gap-8 text-gray-300">
+        <a href="#features" className="hover:text-white transition">Features</a>
+        <a href="#pricing" className="hover:text-white transition">Pricing</a>
+        <a href="#contact" className="hover:text-white transition">Contact</a>
+      </nav>
 
-body{
-background:#f8f5f1;
-color:#111;
-}
+      <div className="flex gap-3">
+        <button className="px-4 py-2 rounded-xl border border-white/10 hover:bg-white/10 transition">
+          Login
+        </button>
 
-/* NAVBAR */
+        <button className="px-5 py-2 rounded-xl bg-gradient-to-r from-violet-600 to-cyan-500 hover:scale-105 transition">
+          Start Free
+        </button>
+      </div>
+    </div>
+  </header>
 
-nav{
-position:fixed;
-top:0;
-width:100%;
-padding:18px 7%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:rgba(255,255,255,0.85);
-backdrop-filter:blur(10px);
-z-index:1000;
-}
+  {/* HERO */}
+  <section className="relative pt-40 pb-32 px-6">
+    <div className="absolute inset-0 bg-gradient-to-br from-violet-500/20 to-cyan-500/10 blur-3xl" />
 
-.logo{
-font-size:26px;
-font-weight:700;
-letter-spacing:2px;
-}
+    <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10">
+      <div>
+        <div className="inline-flex px-4 py-2 rounded-full border border-cyan-500/20 bg-cyan-500/10 text-cyan-300 text-sm mb-6">
+          🚀 AI Automation Platform
+        </div>
 
-nav ul{
-display:flex;
-gap:25px;
-list-style:none;
-}
+        <h2 className="text-5xl lg:text-7xl font-bold leading-tight mb-6">
+          Build Autonomous
+          <span className="bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">
+            {' '}AI Systems{' '}
+          </span>
+          That Work For You
+        </h2>
 
-nav ul li a{
-text-decoration:none;
-color:#111;
-font-weight:500;
-}
+        <p className="text-gray-400 text-lg mb-10 max-w-xl leading-relaxed">
+          Create intelligent AI agents, automate workflows, and scale your digital business with powerful modern infrastructure.
+        </p>
 
-/* HERO */
+        <div className="flex gap-4 flex-wrap">
+          <button className="px-8 py-4 rounded-2xl bg-gradient-to-r from-violet-600 to-cyan-500 hover:scale-105 transition font-semibold shadow-2xl shadow-violet-500/30">
+            Start Building
+          </button>
 
-.hero{
-height:100vh;
-background:url('images/hero.jpg') center/cover no-repeat;
-display:flex;
-align-items:center;
-padding:0 7%;
-position:relative;
-}
+          <button className="px-8 py-4 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition">
+            Watch Demo
+          </button>
+        </div>
+      </div>
 
-.hero::after{
-content:'';
-position:absolute;
-inset:0;
-background:rgba(0,0,0,0.35);
-}
+      <div className="relative">
+        <div className="absolute -inset-4 bg-gradient-to-r from-violet-500/20 to-cyan-500/20 blur-3xl rounded-full" />
 
-.hero-content{
-position:relative;
-z-index:2;
-color:white;
-max-width:550px;
-}
+        <div className="relative bg-white/5 border border-white/10 rounded-3xl p-6 backdrop-blur-xl shadow-2xl">
+          <div className="flex gap-2 mb-6">
+            <div className="w-3 h-3 rounded-full bg-red-500" />
+            <div className="w-3 h-3 rounded-full bg-yellow-500" />
+            <div className="w-3 h-3 rounded-full bg-green-500" />
+          </div>
 
-.hero-content h1{
-font-size:58px;
-line-height:1.1;
-margin-bottom:20px;
-}
+          <div className="space-y-4 font-mono text-sm">
+            <div className="text-cyan-400">&gt; AI Agent Activated...</div>
+            <div className="text-violet-400">&gt; Automating workflows...</div>
+            <div className="text-green-400">&gt; Memory synced...</div>
+            <div className="text-yellow-400">&gt; Deploying intelligent systems...</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-.hero-content p{
-font-size:17px;
-margin-bottom:30px;
-color:#eee;
-}
+  {/* TRUSTED */}
+  <section className="py-16 border-y border-white/5">
+    <div className="max-w-7xl mx-auto px-6 text-center">
+      <p className="uppercase tracking-[0.3em] text-sm text-gray-500 mb-10">
+        Trusted By Modern Teams
+      </p>
 
-.btn{
-display:inline-block;
-padding:14px 34px;
-background:white;
-color:black;
-border-radius:40px;
-text-decoration:none;
-font-weight:600;
-}
+      <div className="grid grid-cols-2 md:grid-cols-5 gap-8 text-2xl font-bold text-gray-400">
+        <div>OpenAI</div>
+        <div>Vercel</div>
+        <div>Supabase</div>
+        <div>Stripe</div>
+        <div>Slack</div>
+      </div>
+    </div>
+  </section>
 
-/* PRODUCTS */
+  {/* FLOATING SOCIAL BUTTONS */
+  <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
+    <a
+      href="https://wa.me/8801000000000"
+      target="_blank"
+      className="w-14 h-14 rounded-full bg-green-500 shadow-2xl shadow-green-500/30 text-black font-bold flex items-center justify-center hover:scale-110 transition"
+    >
+      WA
+    </a>
 
-.products{
-padding:100px 7%;
-}
+    <a
+      href="https://t.me/yourusername"
+      target="_blank"
+      className="w-14 h-14 rounded-full bg-cyan-500 shadow-2xl shadow-cyan-500/30 text-black font-bold flex items-center justify-center hover:scale-110 transition"
+    >
+      TG
+    </a>
 
-.section-title{
-font-size:40px;
-margin-bottom:50px;
-text-align:center;
-}
+    <button
+      className="w-14 h-14 rounded-full bg-blue-500 shadow-2xl shadow-blue-500/30 text-white font-bold flex items-center justify-center hover:scale-110 transition"
+    >
+      MSG
+    </button>
+  </div>
 
-.product-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:30px;
-}
+  {/* LIVE CHAT WIDGET */}
+  <div className="fixed bottom-6 left-6 z-50 w-80 rounded-3xl border border-white/10 bg-[#0F172A]/95 backdrop-blur-xl overflow-hidden shadow-2xl">
+    <div className="flex items-center justify-between px-5 py-4 border-b border-white/10 bg-gradient-to-r from-violet-600/20 to-cyan-500/20">
+      <div>
+        <h3 className="font-semibold">Nexus AI Support</h3>
+        <p className="text-xs text-green-400">● Online Now</p>
+      </div>
 
-.card{
-background:white;
-border-radius:22px;
-overflow:hidden;
-transition:0.3s;
-box-shadow:0 8px 25px rgba(0,0,0,0.08);
-}
+      <button className="text-gray-400 hover:text-white transition">
+        ✕
+      </button>
+    </div>
 
-.card:hover{
-transform:translateY(-8px);
-}
+    <div className="p-5 space-y-4 h-72 overflow-y-auto">
+      <div className="bg-white/5 rounded-2xl p-4 max-w-[85%] text-sm text-gray-300">
+        👋 Welcome to Nexus AI. How can we help you today?
+      </div>
 
-.card img{
-width:100%;
-height:420px;
-object-fit:cover;
-}
+      <div className="bg-gradient-to-r from-violet-600 to-cyan-500 rounded-2xl p-4 max-w-[85%] ml-auto text-sm text-white">
+        I want to build an AI automation system.
+      </div>
 
-.card-content{
-padding:18px;
-}
+      <div className="bg-white/5 rounded-2xl p-4 max-w-[85%] text-sm text-gray-300">
+        Great! Our AI team can help automate your workflows and business systems.
+      </div>
+    </div>
 
-.product-name{
-font-size:20px;
-font-weight:600;
-margin-bottom:8px;
-}
+    <div className="p-4 border-t border-white/10 flex gap-3">
+      <input
+        type="text"
+        placeholder="Type your message..."
+        className="flex-1 p-3 rounded-2xl bg-white/5 border border-white/10 outline-none text-sm"
+      />
 
-.price{
-font-size:18px;
-font-weight:700;
-margin-bottom:12px;
-}
+      <button className="px-5 rounded-2xl bg-gradient-to-r from-violet-600 to-cyan-500 font-semibold hover:scale-105 transition">
+        Send
+      </button>
+    </div>
+  </div>
 
-/* COLORS */
+  {/* STATS SECTION */ */}
+  <section className="py-24 px-6">
+    <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-8 text-center">
+      {[
+        { value: '50+', label: 'AI Projects' },
+        { value: '20K+', label: 'Users' },
+        { value: '99%', label: 'Client Satisfaction' },
+        { value: '120+', label: 'Automations Built' },
+      ].map((stat, index) => (
+        <div
+          key={index}
+          className="p-8 rounded-3xl bg-white/5 border border-white/10"
+        >
+          <h3 className="text-5xl font-bold mb-3 bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">
+            {stat.value}
+          </h3>
 
-.colors{
-display:flex;
-gap:8px;
-margin-bottom:15px;
-}
+          <p className="text-gray-400">{stat.label}</p>
+        </div>
+      ))}
+    </div>
+  </section>
 
-.color{
-width:22px;
-height:22px;
-border-radius:50%;
-border:2px solid #ddd;
-}
+  /* FEATURES */}
+  <section id="features" className="py-32 px-6">
+    <div className="max-w-7xl mx-auto">
+      <div className="text-center mb-20">
+        <h2 className="text-5xl font-bold mb-6">Powerful AI Features</h2>
+        <p className="text-gray-400 max-w-2xl mx-auto">
+          Build next-generation AI applications with modern automation and intelligent systems.
+        </p>
+      </div>
 
-/* SIZES */
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {features.map((feature, index) => (
+          <div
+            key={index}
+            className="p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl hover:-translate-y-2 transition duration-300"
+          >
+            <div className="w-14 h-14 rounded-2xl bg-gradient-to-r from-violet-600 to-cyan-500 mb-6" />
 
-.sizes{
-display:flex;
-gap:10px;
-flex-wrap:wrap;
-}
+            <h3 className="text-2xl font-semibold mb-4">
+              {feature}
+            </h3>
 
-.size-box{
-border:1px solid #ddd;
-border-radius:10px;
-padding:6px 10px;
-text-align:center;
-font-size:13px;
-min-width:52px;
-}
+            <p className="text-gray-400 leading-relaxed">
+              Powerful AI-driven infrastructure for automation, productivity, and business scaling.
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
 
-.size-box span{
-display:block;
-font-size:11px;
-color:#777;
-margin-top:2px;
-}
+  {/* DASHBOARD */}
+  <section className="py-32 px-6 bg-white/[0.02]">
+    <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <h2 className="text-5xl font-bold mb-6">
+          Complete AI Control Center
+        </h2>
 
-/* FOOTER */
+        <p className="text-gray-400 text-lg leading-relaxed mb-10">
+          Manage AI agents, analytics, workflows, automations, and intelligent systems from one modern dashboard.
+        </p>
 
-footer{
-padding:40px;
-text-align:center;
-background:#111;
-color:white;
-margin-top:80px;
-}
+        <div className="space-y-4">
+          <div className="p-5 rounded-2xl border border-white/10 bg-white/5">
+            Active AI Agents: 12
+          </div>
 
-/* MOBILE */
+          <div className="p-5 rounded-2xl border border-white/10 bg-white/5">
+            Automated Tasks Today: 1,254
+          </div>
 
-@media(max-width:1000px){
+          <div className="p-5 rounded-2xl border border-white/10 bg-white/5">
+            Productivity Increase: +74%
+          </div>
+        </div>
+      </div>
 
-.product-grid{
-grid-template-columns:repeat(2,1fr);
-}
+      <div className="bg-gradient-to-br from-violet-500/10 to-cyan-500/10 border border-white/10 rounded-3xl p-8 backdrop-blur-xl shadow-2xl">
+        <div className="grid grid-cols-2 gap-6">
+          <div className="p-6 rounded-2xl bg-black/30 border border-white/10">
+            <p className="text-gray-400 mb-2">Revenue</p>
+            <h3 className="text-3xl font-bold">$45K</h3>
+          </div>
 
-.hero-content h1{
-font-size:42px;
-}
+          <div className="p-6 rounded-2xl bg-black/30 border border-white/10">
+            <p className="text-gray-400 mb-2">Users</p>
+            <h3 className="text-3xl font-bold">12K</h3>
+          </div>
 
-}
+          <div className="col-span-2 p-10 rounded-2xl bg-black/30 border border-white/10 h-52 flex items-center justify-center text-gray-500 text-xl">
+            AI Analytics Graph
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-@media(max-width:650px){
+  {/* TESTIMONIALS */
+  <section className="py-32 px-6 bg-white/[0.02]">
+    <div className="max-w-7xl mx-auto text-center">
+      <h2 className="text-5xl font-bold mb-6">
+        What Clients Say
+      </h2>
 
-nav ul{
-display:none;
-}
+      <p className="text-gray-400 max-w-2xl mx-auto mb-20">
+        Businesses use Nexus AI to automate operations and scale faster.
+      </p>
 
-.product-grid{
-grid-template-columns:1fr;
-}
+      <div className="grid lg:grid-cols-3 gap-8">
+        {[1,2,3].map((item) => (
+          <div
+            key={item}
+            className="p-8 rounded-3xl border border-white/10 bg-white/5 text-left"
+          >
+            <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
 
-.hero-content h1{
-font-size:34px;
-}
+            <p className="text-gray-300 leading-relaxed mb-6">
+              “Nexus AI completely transformed our workflow automation and increased productivity massively.”
+            </p>
 
-.card img{
-height:380px;
-}
+            <div className="flex items-center gap-4">
+              <div className="w-14 h-14 rounded-full bg-gradient-to-r from-violet-500 to-cyan-500" />
 
-}
+              <div>
+                <h4 className="font-semibold">Startup Founder</h4>
+                <p className="text-gray-500 text-sm">Tech Company</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
 
-</style>
-</head>
-<body>
+  {/* FAQ */}
+  <section className="py-32 px-6">
+    <div className="max-w-4xl mx-auto">
+      <div className="text-center mb-20">
+        <h2 className="text-5xl font-bold mb-6">
+          Frequently Asked Questions
+        </h2>
 
-<nav>
-<div class="logo">FRENZY ELEGANCE</div>
+        <p className="text-gray-400">
+          Everything you need to know about our AI systems.
+        </p>
+      </div>
 
-<ul>
-<li><a href="#">Home</a></li>
-<li><a href="#">Collection</a></li>
-<li><a href="#">About</a></li>
-<li><a href="#">Contact</a></li>
-</ul>
-</nav>
+      <div className="space-y-6">
+        {[
+          'How do AI agents work?',
+          'Can I customize workflows?',
+          'Do you support API integration?',
+          'Is there an enterprise plan?',
+        ].map((faq, index) => (
+          <div
+            key={index}
+            className="p-6 rounded-2xl border border-white/10 bg-white/5"
+          >
+            <div className="flex justify-between items-center">
+              <h3 className="text-xl font-semibold">{faq}</h3>
+              <span className="text-2xl">+</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
 
-<section class="hero">
+  {/* FINAL CTA */}
+  <section className="py-32 px-6 relative overflow-hidden">
+    <div className="absolute inset-0 bg-gradient-to-r from-violet-600/20 to-cyan-500/20 blur-3xl" />
 
-<div class="hero-content">
-<h1>Elegant Fashion<br>For Every Woman</h1>
+    <div className="max-w-5xl mx-auto text-center relative z-10">
+      <h2 className="text-6xl font-bold mb-8 leading-tight">
+        Ready To Build The Future With AI?
+      </h2>
 
-<p>
-Discover premium dresses crafted for elegance,
-comfort and timeless beauty.
-</p>
+      <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
+        Launch intelligent AI systems, automate your business, and scale faster than ever.
+      </p>
 
-<a href="#" class="btn">Shop Now</a>
+      <div className="flex flex-wrap justify-center gap-6">
+        <button className="px-10 py-5 rounded-2xl bg-gradient-to-r from-violet-600 to-cyan-500 font-bold text-lg hover:scale-105 transition">
+          Start Free
+        </button>
+
+        <button className="px-10 py-5 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition text-lg">
+          Book Demo
+        </button>
+      </div>
+    </div>
+  </section>
+
+  /* PRICING */}
+  <section id="pricing" className="py-32 px-6">
+    <div className="max-w-7xl mx-auto text-center">
+      <h2 className="text-5xl font-bold mb-6">Pricing Plans</h2>
+
+      <p className="text-gray-400 mb-20 max-w-2xl mx-auto">
+        Flexible plans for creators, startups, agencies, and enterprise AI systems.
+      </p>
+
+      <div className="grid lg:grid-cols-3 gap-8">
+        {pricing.map((plan, index) => (
+          <div
+            key={index}
+            className="p-10 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl"
+          >
+            <h3 className="text-3xl font-bold mb-4">{plan.title}</h3>
+
+            <div className="text-5xl font-bold mb-10">{plan.price}</div>
+
+            <div className="space-y-4 text-gray-400 mb-10">
+              <p>✔ AI Automation</p>
+              <p>✔ Smart Analytics</p>
+              <p>✔ Voice Assistant</p>
+              <p>✔ Workflow System</p>
+            </div>
+
+            <button className="w-full py-4 rounded-2xl bg-gradient-to-r from-violet-600 to-cyan-500 font-semibold">
+              Get Started
+            </button>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* CONTACT */}
+  <section id="contact" className="py-32 px-6 bg-white/[0.02]">
+    <div className="max-w-4xl mx-auto text-center">
+      <h2 className="text-5xl font-bold mb-6">Contact Us</h2>
+
+      <p className="text-gray-400 mb-16">
+        Start building your next-generation AI business today.
+      </p>
+
+      <div className="grid gap-6">
+        <input
+          type="text"
+          placeholder="Your Name"
+          className="w-full p-5 rounded-2xl bg-white/5 border border-white/10 outline-none"
+        />
+
+        <input
+          type="email"
+          placeholder="Your Email"
+          className="w-full p-5 rounded-2xl bg-white/5 border border-white/10 outline-none"
+        />
+
+        <textarea
+          rows="6"
+          placeholder="Your Message"
+          className="w-full p-5 rounded-2xl bg-white/5 border border-white/10 outline-none"
+        />
+
+        <button className="py-5 rounded-2xl bg-gradient-to-r from-violet-600 to-cyan-500 font-semibold text-lg hover:scale-[1.02] transition">
+          Send Message
+        </button>
+      </div>
+    </div>
+  </section>
+
+  {/* FOOTER */}
+  <footer className="border-t border-white/10 py-10 px-6 text-center text-gray-500">
+    <div className="max-w-7xl mx-auto">
+      <h3 className="text-2xl font-bold text-white mb-4">Nexus AI</h3>
+      <p>© 2026 Nexus AI. All rights reserved.</p>
+    </div>
+  </footer>
 </div>
 
-</section>
-
-<section class="products">
-
-<h2 class="section-title">New Collection</h2>
-
-<div class="product-grid">
-
-<!-- PRODUCT 1 -->
-
-<div class="card">
-
-<img src="https://raw.githubusercontent.com/hridoyabbu-web/FrenzyElegance/refs/heads/main/images/IMG-20250908-WA0030.jpg">
-
-<div class="card-content">
-
-<div class="product-name">
-Luxury Black Dress
-</div>
-
-<div class="price">
-৳ 1850
-</div>
-
-<div class="colors">
-<div class="color" style="background:black"></div>
-<div class="color" style="background:#8b0000"></div>
-<div class="color" style="background:#d4af37"></div>
-</div>
-
-<div class="sizes">
-
-<div class="size-box">
-S
-<span>30</span>
-</div>
-
-<div class="size-box">
-M
-<span>32</span>
-</div>
-
-<div class="size-box">
-L
-<span>36</span>
-</div>
-
-<div class="size-box">
-XL
-<span>40</span>
-</div>
-
-</div>
-
-</div>
-</div>
-
-<!-- PRODUCT 2 -->
-
-<div class="card">
-
-<img src="images/2.jpg">
-
-<div class="card-content">
-
-<div class="product-name">
-White Floral Dress
-</div>
-
-<div class="price">
-৳ 2200
-</div>
-
-<div class="colors">
-<div class="color" style="background:#fff"></div>
-<div class="color" style="background:pink"></div>
-<div class="color" style="background:#f5deb3"></div>
-</div>
-
-<div class="sizes">
-
-<div class="size-box">
-S
-<span>30</span>
-</div>
-
-<div class="size-box">
-M
-<span>32</span>
-</div>
-
-<div class="size-box">
-L
-<span>36</span>
-</div>
-
-<div class="size-box">
-XL
-<span>40</span>
-</div>
-
-</div>
-
-</div>
-</div>
-
-<!-- PRODUCT 3 -->
-
-<div class="card">
-
-<img src="images/3.jpg">
-
-<div class="card-content">
-
-<div class="product-name">
-Royal Red Outfit
-</div>
-
-<div class="price">
-৳ 1990
-</div>
-
-<div class="colors">
-<div class="color" style="background:#8b0000"></div>
-<div class="color" style="background:#111"></div>
-<div class="color" style="background:#eee"></div>
-</div>
-
-<div class="sizes">
-
-<div class="size-box">
-S
-<span>30</span>
-</div>
-
-<div class="size-box">
-M
-<span>32</span>
-</div>
-
-<div class="size-box">
-L
-<span>36</span>
-</div>
-
-<div class="size-box">
-XL
-<span>40</span>
-</div>
-
-</div>
-
-</div>
-</div>
-
-<!-- PRODUCT 4 -->
-
-<div class="card">
-
-<img src="images/4.jpg">
-
-<div class="card-content">
-
-<div class="product-name">
-Premium Yellow Dress
-</div>
-
-<div class="price">
-৳ 1750
-</div>
-
-<div class="colors">
-<div class="color" style="background:yellow"></div>
-<div class="color" style="background:#fff"></div>
-<div class="color" style="background:#111"></div>
-</div>
-
-<div class="sizes">
-
-<div class="size-box">
-S
-<span>30</span>
-</div>
-
-<div class="size-box">
-M
-<span>32</span>
-</div>
-
-<div class="size-box">
-L
-<span>36</span>
-</div>
-
-<div class="size-box">
-XL
-<span>40</span>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-
-</section>
-
-<footer>
-
-© 2026 Frenzy Elegance — Premium Fashion Collection
-
-</footer>
-
-</body>
-  </html>
+); }
