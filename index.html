@@ -1,437 +1,568 @@
-export default function PremiumAIHomepage() { const features = [ 'AI Agents', 'Voice Assistant', 'Workflow Automation', 'Smart Memory', 'Realtime Analytics', 'Multi-Agent System', ];
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus AI - Premium AI Automation Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-[#050816] text-white overflow-hidden">
+    <div class="min-h-screen bg-[#050816] text-white overflow-hidden">
+        <!-- NAVBAR -->
+        <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl border-b border-white/10 bg-black/50">
+            <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+                <h1 class="text-2xl font-bold bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">
+                    Nexus AI
+                </h1>
 
-const pricing = [ { title: 'Starter', price: '$29' }, { title: 'Pro', price: '$99' }, { title: 'Enterprise', price: 'Custom' }, ];
+                <nav class="hidden md:flex gap-8 text-gray-300">
+                    <a href="#features" class="hover:text-white transition">Features</a>
+                    <a href="#pricing" class="hover:text-white transition">Pricing</a>
+                    <a href="#contact" class="hover:text-white transition">Contact</a>
+                </nav>
 
-return ( <div className="min-h-screen bg-[#050816] text-white overflow-hidden"> {/* NAVBAR */} <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl border-b border-white/10 bg-black/20"> <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"> <h1 className="text-2xl font-bold">Nexus AI</h1>
+                <div class="flex gap-3">
+                    <button class="px-4 py-2 rounded-xl border border-white/10 hover:bg-white/10 transition">
+                        Login
+                    </button>
 
-<nav className="hidden md:flex gap-8 text-gray-300">
-        <a href="#features" className="hover:text-white transition">Features</a>
-        <a href="#pricing" className="hover:text-white transition">Pricing</a>
-        <a href="#contact" className="hover:text-white transition">Contact</a>
-      </nav>
-
-      <div className="flex gap-3">
-        <button className="px-4 py-2 rounded-xl border border-white/10 hover:bg-white/10 transition">
-          Login
-        </button>
-
-        <button className="px-5 py-2 rounded-xl bg-gradient-to-r from-violet-600 to-cyan-500 hover:scale-105 transition">
-          Start Free
-        </button>
-      </div>
-    </div>
-  </header>
-
-  {/* HERO */}
-  <section className="relative pt-40 pb-32 px-6">
-    <div className="absolute inset-0 bg-gradient-to-br from-violet-500/20 to-cyan-500/10 blur-3xl" />
-
-    <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10">
-      <div>
-        <div className="inline-flex px-4 py-2 rounded-full border border-cyan-500/20 bg-cyan-500/10 text-cyan-300 text-sm mb-6">
-          🚀 AI Automation Platform
-        </div>
-
-        <h2 className="text-5xl lg:text-7xl font-bold leading-tight mb-6">
-          Build Autonomous
-          <span className="bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">
-            {' '}AI Systems{' '}
-          </span>
-          That Work For You
-        </h2>
-
-        <p className="text-gray-400 text-lg mb-10 max-w-xl leading-relaxed">
-          Create intelligent AI agents, automate workflows, and scale your digital business with powerful modern infrastructure.
-        </p>
-
-        <div className="flex gap-4 flex-wrap">
-          <button className="px-8 py-4 rounded-2xl bg-gradient-to-r from-violet-600 to-cyan-500 hover:scale-105 transition font-semibold shadow-2xl shadow-violet-500/30">
-            Start Building
-          </button>
-
-          <button className="px-8 py-4 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition">
-            Watch Demo
-          </button>
-        </div>
-      </div>
-
-      <div className="relative">
-        <div className="absolute -inset-4 bg-gradient-to-r from-violet-500/20 to-cyan-500/20 blur-3xl rounded-full" />
-
-        <div className="relative bg-white/5 border border-white/10 rounded-3xl p-6 backdrop-blur-xl shadow-2xl">
-          <div className="flex gap-2 mb-6">
-            <div className="w-3 h-3 rounded-full bg-red-500" />
-            <div className="w-3 h-3 rounded-full bg-yellow-500" />
-            <div className="w-3 h-3 rounded-full bg-green-500" />
-          </div>
-
-          <div className="space-y-4 font-mono text-sm">
-            <div className="text-cyan-400">&gt; AI Agent Activated...</div>
-            <div className="text-violet-400">&gt; Automating workflows...</div>
-            <div className="text-green-400">&gt; Memory synced...</div>
-            <div className="text-yellow-400">&gt; Deploying intelligent systems...</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  {/* TRUSTED */}
-  <section className="py-16 border-y border-white/5">
-    <div className="max-w-7xl mx-auto px-6 text-center">
-      <p className="uppercase tracking-[0.3em] text-sm text-gray-500 mb-10">
-        Trusted By Modern Teams
-      </p>
-
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-8 text-2xl font-bold text-gray-400">
-        <div>OpenAI</div>
-        <div>Vercel</div>
-        <div>Supabase</div>
-        <div>Stripe</div>
-        <div>Slack</div>
-      </div>
-    </div>
-  </section>
-
-  {/* FLOATING SOCIAL BUTTONS */
-  <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
-    <a
-      href="https://wa.me/8801000000000"
-      target="_blank"
-      className="w-14 h-14 rounded-full bg-green-500 shadow-2xl shadow-green-500/30 text-black font-bold flex items-center justify-center hover:scale-110 transition"
-    >
-      WA
-    </a>
-
-    <a
-      href="https://t.me/yourusername"
-      target="_blank"
-      className="w-14 h-14 rounded-full bg-cyan-500 shadow-2xl shadow-cyan-500/30 text-black font-bold flex items-center justify-center hover:scale-110 transition"
-    >
-      TG
-    </a>
-
-    <button
-      className="w-14 h-14 rounded-full bg-blue-500 shadow-2xl shadow-blue-500/30 text-white font-bold flex items-center justify-center hover:scale-110 transition"
-    >
-      MSG
-    </button>
-  </div>
-
-  {/* LIVE CHAT WIDGET */}
-  <div className="fixed bottom-6 left-6 z-50 w-80 rounded-3xl border border-white/10 bg-[#0F172A]/95 backdrop-blur-xl overflow-hidden shadow-2xl">
-    <div className="flex items-center justify-between px-5 py-4 border-b border-white/10 bg-gradient-to-r from-violet-600/20 to-cyan-500/20">
-      <div>
-        <h3 className="font-semibold">Nexus AI Support</h3>
-        <p className="text-xs text-green-400">● Online Now</p>
-      </div>
-
-      <button className="text-gray-400 hover:text-white transition">
-        ✕
-      </button>
-    </div>
-
-    <div className="p-5 space-y-4 h-72 overflow-y-auto">
-      <div className="bg-white/5 rounded-2xl p-4 max-w-[85%] text-sm text-gray-300">
-        👋 Welcome to Nexus AI. How can we help you today?
-      </div>
-
-      <div className="bg-gradient-to-r from-violet-600 to-cyan-500 rounded-2xl p-4 max-w-[85%] ml-auto text-sm text-white">
-        I want to build an AI automation system.
-      </div>
-
-      <div className="bg-white/5 rounded-2xl p-4 max-w-[85%] text-sm text-gray-300">
-        Great! Our AI team can help automate your workflows and business systems.
-      </div>
-    </div>
-
-    <div className="p-4 border-t border-white/10 flex gap-3">
-      <input
-        type="text"
-        placeholder="Type your message..."
-        className="flex-1 p-3 rounded-2xl bg-white/5 border border-white/10 outline-none text-sm"
-      />
-
-      <button className="px-5 rounded-2xl bg-gradient-to-r from-violet-600 to-cyan-500 font-semibold hover:scale-105 transition">
-        Send
-      </button>
-    </div>
-  </div>
-
-  {/* STATS SECTION */ */}
-  <section className="py-24 px-6">
-    <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-8 text-center">
-      {[
-        { value: '50+', label: 'AI Projects' },
-        { value: '20K+', label: 'Users' },
-        { value: '99%', label: 'Client Satisfaction' },
-        { value: '120+', label: 'Automations Built' },
-      ].map((stat, index) => (
-        <div
-          key={index}
-          className="p-8 rounded-3xl bg-white/5 border border-white/10"
-        >
-          <h3 className="text-5xl font-bold mb-3 bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">
-            {stat.value}
-          </h3>
-
-          <p className="text-gray-400">{stat.label}</p>
-        </div>
-      ))}
-    </div>
-  </section>
-
-  /* FEATURES */}
-  <section id="features" className="py-32 px-6">
-    <div className="max-w-7xl mx-auto">
-      <div className="text-center mb-20">
-        <h2 className="text-5xl font-bold mb-6">Powerful AI Features</h2>
-        <p className="text-gray-400 max-w-2xl mx-auto">
-          Build next-generation AI applications with modern automation and intelligent systems.
-        </p>
-      </div>
-
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {features.map((feature, index) => (
-          <div
-            key={index}
-            className="p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl hover:-translate-y-2 transition duration-300"
-          >
-            <div className="w-14 h-14 rounded-2xl bg-gradient-to-r from-violet-600 to-cyan-500 mb-6" />
-
-            <h3 className="text-2xl font-semibold mb-4">
-              {feature}
-            </h3>
-
-            <p className="text-gray-400 leading-relaxed">
-              Powerful AI-driven infrastructure for automation, productivity, and business scaling.
-            </p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  {/* DASHBOARD */}
-  <section className="py-32 px-6 bg-white/[0.02]">
-    <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-      <div>
-        <h2 className="text-5xl font-bold mb-6">
-          Complete AI Control Center
-        </h2>
-
-        <p className="text-gray-400 text-lg leading-relaxed mb-10">
-          Manage AI agents, analytics, workflows, automations, and intelligent systems from one modern dashboard.
-        </p>
-
-        <div className="space-y-4">
-          <div className="p-5 rounded-2xl border border-white/10 bg-white/5">
-            Active AI Agents: 12
-          </div>
-
-          <div className="p-5 rounded-2xl border border-white/10 bg-white/5">
-            Automated Tasks Today: 1,254
-          </div>
-
-          <div className="p-5 rounded-2xl border border-white/10 bg-white/5">
-            Productivity Increase: +74%
-          </div>
-        </div>
-      </div>
-
-      <div className="bg-gradient-to-br from-violet-500/10 to-cyan-500/10 border border-white/10 rounded-3xl p-8 backdrop-blur-xl shadow-2xl">
-        <div className="grid grid-cols-2 gap-6">
-          <div className="p-6 rounded-2xl bg-black/30 border border-white/10">
-            <p className="text-gray-400 mb-2">Revenue</p>
-            <h3 className="text-3xl font-bold">$45K</h3>
-          </div>
-
-          <div className="p-6 rounded-2xl bg-black/30 border border-white/10">
-            <p className="text-gray-400 mb-2">Users</p>
-            <h3 className="text-3xl font-bold">12K</h3>
-          </div>
-
-          <div className="col-span-2 p-10 rounded-2xl bg-black/30 border border-white/10 h-52 flex items-center justify-center text-gray-500 text-xl">
-            AI Analytics Graph
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  {/* TESTIMONIALS */
-  <section className="py-32 px-6 bg-white/[0.02]">
-    <div className="max-w-7xl mx-auto text-center">
-      <h2 className="text-5xl font-bold mb-6">
-        What Clients Say
-      </h2>
-
-      <p className="text-gray-400 max-w-2xl mx-auto mb-20">
-        Businesses use Nexus AI to automate operations and scale faster.
-      </p>
-
-      <div className="grid lg:grid-cols-3 gap-8">
-        {[1,2,3].map((item) => (
-          <div
-            key={item}
-            className="p-8 rounded-3xl border border-white/10 bg-white/5 text-left"
-          >
-            <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
-
-            <p className="text-gray-300 leading-relaxed mb-6">
-              “Nexus AI completely transformed our workflow automation and increased productivity massively.”
-            </p>
-
-            <div className="flex items-center gap-4">
-              <div className="w-14 h-14 rounded-full bg-gradient-to-r from-violet-500 to-cyan-500" />
-
-              <div>
-                <h4 className="font-semibold">Startup Founder</h4>
-                <p className="text-gray-500 text-sm">Tech Company</p>
-              </div>
+                    <button class="px-5 py-2 rounded-xl bg-gradient-to-r from-violet-600 to-cyan-500 hover:scale-105 transition">
+                        Start Free
+                    </button>
+                </div>
             </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
+        </header>
 
-  {/* FAQ */}
-  <section className="py-32 px-6">
-    <div className="max-w-4xl mx-auto">
-      <div className="text-center mb-20">
-        <h2 className="text-5xl font-bold mb-6">
-          Frequently Asked Questions
-        </h2>
+        <!-- HERO -->
+        <section class="relative pt-40 pb-32 px-6">
+            <div class="absolute inset-0 bg-gradient-to-br from-violet-500/20 to-cyan-500/10 blur-3xl"></div>
 
-        <p className="text-gray-400">
-          Everything you need to know about our AI systems.
-        </p>
-      </div>
+            <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10">
+                <div>
+                    <div class="inline-flex px-4 py-2 rounded-full border border-cyan-500/20 bg-cyan-500/10 text-cyan-300 text-sm mb-6">
+                        🚀 AI Automation Platform
+                    </div>
 
-      <div className="space-y-6">
-        {[
-          'How do AI agents work?',
-          'Can I customize workflows?',
-          'Do you support API integration?',
-          'Is there an enterprise plan?',
-        ].map((faq, index) => (
-          <div
-            key={index}
-            className="p-6 rounded-2xl border border-white/10 bg-white/5"
-          >
-            <div className="flex justify-between items-center">
-              <h3 className="text-xl font-semibold">{faq}</h3>
-              <span className="text-2xl">+</span>
+                    <h2 class="text-5xl lg:text-7xl font-bold leading-tight mb-6">
+                        Build Autonomous
+                        <span class="bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">
+                            AI Systems
+                        </span>
+                        That Work For You
+                    </h2>
+
+                    <p class="text-gray-400 text-lg mb-10 max-w-xl leading-relaxed">
+                        Create intelligent AI agents, automate workflows, and scale your digital business with powerful modern infrastructure.
+                    </p>
+
+                    <div class="flex gap-4 flex-wrap">
+                        <button class="px-8 py-4 rounded-2xl bg-gradient-to-r from-violet-600 to-cyan-500 hover:scale-105 transition font-semibold shadow-2xl shadow-violet-500/30">
+                            Start Building
+                        </button>
+
+                        <button class="px-8 py-4 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition">
+                            Watch Demo
+                        </button>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-gradient-to-r from-violet-500/20 to-cyan-500/20 blur-3xl rounded-full"></div>
+
+                    <div class="relative bg-white/5 border border-white/10 rounded-3xl p-6 backdrop-blur-xl shadow-2xl">
+                        <div class="flex gap-2 mb-6">
+                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        </div>
+
+                        <div class="space-y-4 font-mono text-sm">
+                            <div class="text-cyan-400">&gt; AI Agent Activated...</div>
+                            <div class="text-violet-400">&gt; Automating workflows...</div>
+                            <div class="text-green-400">&gt; Memory synced...</div>
+                            <div class="text-yellow-400">&gt; Deploying intelligent systems...</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
+        </section>
 
-  {/* FINAL CTA */}
-  <section className="py-32 px-6 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-violet-600/20 to-cyan-500/20 blur-3xl" />
+        <!-- TRUSTED -->
+        <section class="py-16 border-y border-white/5">
+            <div class="max-w-7xl mx-auto px-6 text-center">
+                <p class="uppercase tracking-[0.3em] text-sm text-gray-500 mb-10">
+                    Trusted By Modern Teams
+                </p>
 
-    <div className="max-w-5xl mx-auto text-center relative z-10">
-      <h2 className="text-6xl font-bold mb-8 leading-tight">
-        Ready To Build The Future With AI?
-      </h2>
-
-      <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
-        Launch intelligent AI systems, automate your business, and scale faster than ever.
-      </p>
-
-      <div className="flex flex-wrap justify-center gap-6">
-        <button className="px-10 py-5 rounded-2xl bg-gradient-to-r from-violet-600 to-cyan-500 font-bold text-lg hover:scale-105 transition">
-          Start Free
-        </button>
-
-        <button className="px-10 py-5 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition text-lg">
-          Book Demo
-        </button>
-      </div>
-    </div>
-  </section>
-
-  /* PRICING */}
-  <section id="pricing" className="py-32 px-6">
-    <div className="max-w-7xl mx-auto text-center">
-      <h2 className="text-5xl font-bold mb-6">Pricing Plans</h2>
-
-      <p className="text-gray-400 mb-20 max-w-2xl mx-auto">
-        Flexible plans for creators, startups, agencies, and enterprise AI systems.
-      </p>
-
-      <div className="grid lg:grid-cols-3 gap-8">
-        {pricing.map((plan, index) => (
-          <div
-            key={index}
-            className="p-10 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl"
-          >
-            <h3 className="text-3xl font-bold mb-4">{plan.title}</h3>
-
-            <div className="text-5xl font-bold mb-10">{plan.price}</div>
-
-            <div className="space-y-4 text-gray-400 mb-10">
-              <p>✔ AI Automation</p>
-              <p>✔ Smart Analytics</p>
-              <p>✔ Voice Assistant</p>
-              <p>✔ Workflow System</p>
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-8 text-2xl font-bold text-gray-400">
+                    <div>OpenAI</div>
+                    <div>Vercel</div>
+                    <div>Supabase</div>
+                    <div>Stripe</div>
+                    <div>Slack</div>
+                </div>
             </div>
+        </section>
 
-            <button className="w-full py-4 rounded-2xl bg-gradient-to-r from-violet-600 to-cyan-500 font-semibold">
-              Get Started
+        <!-- FLOATING SOCIAL BUTTONS -->
+        <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
+            <a
+                href="https://wa.me/8801000000000"
+                target="_blank"
+                class="w-14 h-14 rounded-full bg-green-500 shadow-2xl shadow-green-500/30 text-black font-bold flex items-center justify-center hover:scale-110 transition"
+            >
+                WA
+            </a>
+
+            <a
+                href="https://t.me/yourusername"
+                target="_blank"
+                class="w-14 h-14 rounded-full bg-cyan-500 shadow-2xl shadow-cyan-500/30 text-black font-bold flex items-center justify-center hover:scale-110 transition"
+            >
+                TG
+            </a>
+
+            <button
+                class="w-14 h-14 rounded-full bg-blue-500 shadow-2xl shadow-blue-500/30 text-white font-bold flex items-center justify-center hover:scale-110 transition"
+            >
+                MSG
             </button>
-          </div>
-        ))}
-      </div>
+        </div>
+
+        <!-- LIVE CHAT WIDGET -->
+        <div class="fixed bottom-6 left-6 z-50 w-80 rounded-3xl border border-white/10 bg-[#0F172A]/95 backdrop-blur-xl overflow-hidden shadow-2xl">
+            <div class="flex items-center justify-between px-5 py-4 border-b border-white/10 bg-gradient-to-r from-violet-600/20 to-cyan-500/20">
+                <div>
+                    <h3 class="font-semibold">Nexus AI Support</h3>
+                    <p class="text-xs text-green-400">● Online Now</p>
+                </div>
+
+                <button class="text-gray-400 hover:text-white transition">
+                    ✕
+                </button>
+            </div>
+
+            <div class="p-5 space-y-4 h-72 overflow-y-auto">
+                <div class="bg-white/5 rounded-2xl p-4 max-w-[85%] text-sm text-gray-300">
+                    👋 Welcome to Nexus AI. How can we help you today?
+                </div>
+
+                <div class="bg-gradient-to-r from-violet-600 to-cyan-500 rounded-2xl p-4 max-w-[85%] ml-auto text-sm text-white">
+                    I want to build an AI automation system.
+                </div>
+
+                <div class="bg-white/5 rounded-2xl p-4 max-w-[85%] text-sm text-gray-300">
+                    Great! Our AI team can help automate your workflows and business systems.
+                </div>
+            </div>
+
+            <div class="p-4 border-t border-white/10 flex gap-3">
+                <input
+                    type="text"
+                    placeholder="Type your message..."
+                    class="flex-1 p-3 rounded-2xl bg-white/5 border border-white/10 outline-none text-sm"
+                />
+
+                <button class="px-5 rounded-2xl bg-gradient-to-r from-violet-600 to-cyan-500 font-semibold hover:scale-105 transition">
+                    Send
+                </button>
+            </div>
+        </div>
+
+        <!-- STATS SECTION -->
+        <section class="py-24 px-6">
+            <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-8 text-center">
+                <div class="p-8 rounded-3xl bg-white/5 border border-white/10">
+                    <h3 class="text-5xl font-bold mb-3 bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">
+                        50+
+                    </h3>
+                    <p class="text-gray-400">AI Projects</p>
+                </div>
+
+                <div class="p-8 rounded-3xl bg-white/5 border border-white/10">
+                    <h3 class="text-5xl font-bold mb-3 bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">
+                        20K+
+                    </h3>
+                    <p class="text-gray-400">Users</p>
+                </div>
+
+                <div class="p-8 rounded-3xl bg-white/5 border border-white/10">
+                    <h3 class="text-5xl font-bold mb-3 bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">
+                        99%
+                    </h3>
+                    <p class="text-gray-400">Client Satisfaction</p>
+                </div>
+
+                <div class="p-8 rounded-3xl bg-white/5 border border-white/10">
+                    <h3 class="text-5xl font-bold mb-3 bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">
+                        120+
+                    </h3>
+                    <p class="text-gray-400">Automations Built</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURES -->
+        <section id="features" class="py-32 px-6">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-20">
+                    <h2 class="text-5xl font-bold mb-6">Powerful AI Features</h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">
+                        Build next-generation AI applications with modern automation and intelligent systems.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl hover:-translate-y-2 transition duration-300">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-r from-violet-600 to-cyan-500 mb-6"></div>
+                        <h3 class="text-2xl font-semibold mb-4">AI Agents</h3>
+                        <p class="text-gray-400 leading-relaxed">
+                            Powerful AI-driven infrastructure for automation, productivity, and business scaling.
+                        </p>
+                    </div>
+
+                    <div class="p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl hover:-translate-y-2 transition duration-300">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-r from-violet-600 to-cyan-500 mb-6"></div>
+                        <h3 class="text-2xl font-semibold mb-4">Voice Assistant</h3>
+                        <p class="text-gray-400 leading-relaxed">
+                            Powerful AI-driven infrastructure for automation, productivity, and business scaling.
+                        </p>
+                    </div>
+
+                    <div class="p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl hover:-translate-y-2 transition duration-300">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-r from-violet-600 to-cyan-500 mb-6"></div>
+                        <h3 class="text-2xl font-semibold mb-4">Workflow Automation</h3>
+                        <p class="text-gray-400 leading-relaxed">
+                            Powerful AI-driven infrastructure for automation, productivity, and business scaling.
+                        </p>
+                    </div>
+
+                    <div class="p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl hover:-translate-y-2 transition duration-300">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-r from-violet-600 to-cyan-500 mb-6"></div>
+                        <h3 class="text-2xl font-semibold mb-4">Smart Memory</h3>
+                        <p class="text-gray-400 leading-relaxed">
+                            Powerful AI-driven infrastructure for automation, productivity, and business scaling.
+                        </p>
+                    </div>
+
+                    <div class="p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl hover:-translate-y-2 transition duration-300">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-r from-violet-600 to-cyan-500 mb-6"></div>
+                        <h3 class="text-2xl font-semibold mb-4">Realtime Analytics</h3>
+                        <p class="text-gray-400 leading-relaxed">
+                            Powerful AI-driven infrastructure for automation, productivity, and business scaling.
+                        </p>
+                    </div>
+
+                    <div class="p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl hover:-translate-y-2 transition duration-300">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-r from-violet-600 to-cyan-500 mb-6"></div>
+                        <h3 class="text-2xl font-semibold mb-4">Multi-Agent System</h3>
+                        <p class="text-gray-400 leading-relaxed">
+                            Powerful AI-driven infrastructure for automation, productivity, and business scaling.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DASHBOARD -->
+        <section class="py-32 px-6 bg-white/[0.02]">
+            <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-5xl font-bold mb-6">
+                        Complete AI Control Center
+                    </h2>
+
+                    <p class="text-gray-400 text-lg leading-relaxed mb-10">
+                        Manage AI agents, analytics, workflows, automations, and intelligent systems from one modern dashboard.
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="p-5 rounded-2xl border border-white/10 bg-white/5">
+                            Active AI Agents: 12
+                        </div>
+
+                        <div class="p-5 rounded-2xl border border-white/10 bg-white/5">
+                            Automated Tasks Today: 1,254
+                        </div>
+
+                        <div class="p-5 rounded-2xl border border-white/10 bg-white/5">
+                            Productivity Increase: +74%
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-violet-500/10 to-cyan-500/10 border border-white/10 rounded-3xl p-8 backdrop-blur-xl shadow-2xl">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="p-6 rounded-2xl bg-black/30 border border-white/10">
+                            <p class="text-gray-400 mb-2">Revenue</p>
+                            <h3 class="text-3xl font-bold">$45K</h3>
+                        </div>
+
+                        <div class="p-6 rounded-2xl bg-black/30 border border-white/10">
+                            <p class="text-gray-400 mb-2">Users</p>
+                            <h3 class="text-3xl font-bold">12K</h3>
+                        </div>
+
+                        <div class="col-span-2 p-10 rounded-2xl bg-black/30 border border-white/10 h-52 flex items-center justify-center text-gray-500 text-xl">
+                            AI Analytics Graph
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS -->
+        <section class="py-32 px-6 bg-white/[0.02]">
+            <div class="max-w-7xl mx-auto text-center">
+                <h2 class="text-5xl font-bold mb-6">
+                    What Clients Say
+                </h2>
+
+                <p class="text-gray-400 max-w-2xl mx-auto mb-20">
+                    Businesses use Nexus AI to automate operations and scale faster.
+                </p>
+
+                <div class="grid lg:grid-cols-3 gap-8">
+                    <div class="p-8 rounded-3xl border border-white/10 bg-white/5 text-left">
+                        <div class="text-yellow-400 text-2xl mb-4">★★★★★</div>
+
+                        <p class="text-gray-300 leading-relaxed mb-6">
+                            "Nexus AI completely transformed our workflow automation and increased productivity massively."
+                        </p>
+
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 rounded-full bg-gradient-to-r from-violet-500 to-cyan-500"></div>
+
+                            <div>
+                                <h4 class="font-semibold">Startup Founder</h4>
+                                <p class="text-gray-500 text-sm">Tech Company</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-8 rounded-3xl border border-white/10 bg-white/5 text-left">
+                        <div class="text-yellow-400 text-2xl mb-4">★★★★★</div>
+
+                        <p class="text-gray-300 leading-relaxed mb-6">
+                            "Nexus AI completely transformed our workflow automation and increased productivity massively."
+                        </p>
+
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 rounded-full bg-gradient-to-r from-violet-500 to-cyan-500"></div>
+
+                            <div>
+                                <h4 class="font-semibold">CEO</h4>
+                                <p class="text-gray-500 text-sm">Enterprise Company</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-8 rounded-3xl border border-white/10 bg-white/5 text-left">
+                        <div class="text-yellow-400 text-2xl mb-4">★★★★★</div>
+
+                        <p class="text-gray-300 leading-relaxed mb-6">
+                            "Nexus AI completely transformed our workflow automation and increased productivity massively."
+                        </p>
+
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 rounded-full bg-gradient-to-r from-violet-500 to-cyan-500"></div>
+
+                            <div>
+                                <h4 class="font-semibold">Product Manager</h4>
+                                <p class="text-gray-500 text-sm">Product Company</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="py-32 px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-20">
+                    <h2 class="text-5xl font-bold mb-6">
+                        Frequently Asked Questions
+                    </h2>
+
+                    <p class="text-gray-400">
+                        Everything you need to know about our AI systems.
+                    </p>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="p-6 rounded-2xl border border-white/10 bg-white/5">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl font-semibold">How do AI agents work?</h3>
+                            <span class="text-2xl">+</span>
+                        </div>
+                    </div>
+
+                    <div class="p-6 rounded-2xl border border-white/10 bg-white/5">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl font-semibold">Can I customize workflows?</h3>
+                            <span class="text-2xl">+</span>
+                        </div>
+                    </div>
+
+                    <div class="p-6 rounded-2xl border border-white/10 bg-white/5">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl font-semibold">Do you support API integration?</h3>
+                            <span class="text-2xl">+</span>
+                        </div>
+                    </div>
+
+                    <div class="p-6 rounded-2xl border border-white/10 bg-white/5">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl font-semibold">Is there an enterprise plan?</h3>
+                            <span class="text-2xl">+</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="py-32 px-6 relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-r from-violet-600/20 to-cyan-500/20 blur-3xl"></div>
+
+            <div class="max-w-5xl mx-auto text-center relative z-10">
+                <h2 class="text-6xl font-bold mb-8 leading-tight">
+                    Ready To Build The Future With AI?
+                </h2>
+
+                <p class="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
+                    Launch intelligent AI systems, automate your business, and scale faster than ever.
+                </p>
+
+                <div class="flex flex-wrap justify-center gap-6">
+                    <button class="px-10 py-5 rounded-2xl bg-gradient-to-r from-violet-600 to-cyan-500 font-bold text-lg hover:scale-105 transition">
+                        Start Free
+                    </button>
+
+                    <button class="px-10 py-5 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition text-lg">
+                        Book Demo
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRICING -->
+        <section id="pricing" class="py-32 px-6">
+            <div class="max-w-7xl mx-auto text-center">
+                <h2 class="text-5xl font-bold mb-6">Pricing Plans</h2>
+
+                <p class="text-gray-400 mb-20 max-w-2xl mx-auto">
+                    Flexible plans for creators, startups, agencies, and enterprise AI systems.
+                </p>
+
+                <div class="grid lg:grid-cols-3 gap-8">
+                    <div class="p-10 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl">
+                        <h3 class="text-3xl font-bold mb-4">Starter</h3>
+
+                        <div class="text-5xl font-bold mb-10">$29</div>
+
+                        <div class="space-y-4 text-gray-400 mb-10">
+                            <p>✔ AI Automation</p>
+                            <p>✔ Smart Analytics</p>
+                            <p>✔ Voice Assistant</p>
+                            <p>✔ Workflow System</p>
+                        </div>
+
+                        <button class="w-full py-4 rounded-2xl bg-gradient-to-r from-violet-600 to-cyan-500 font-semibold">
+                            Get Started
+                        </button>
+                    </div>
+
+                    <div class="p-10 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl">
+                        <h3 class="text-3xl font-bold mb-4">Pro</h3>
+
+                        <div class="text-5xl font-bold mb-10">$99</div>
+
+                        <div class="space-y-4 text-gray-400 mb-10">
+                            <p>✔ AI Automation</p>
+                            <p>✔ Smart Analytics</p>
+                            <p>✔ Voice Assistant</p>
+                            <p>✔ Workflow System</p>
+                        </div>
+
+                        <button class="w-full py-4 rounded-2xl bg-gradient-to-r from-violet-600 to-cyan-500 font-semibold">
+                            Get Started
+                        </button>
+                    </div>
+
+                    <div class="p-10 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl">
+                        <h3 class="text-3xl font-bold mb-4">Enterprise</h3>
+
+                        <div class="text-5xl font-bold mb-10">Custom</div>
+
+                        <div class="space-y-4 text-gray-400 mb-10">
+                            <p>✔ AI Automation</p>
+                            <p>✔ Smart Analytics</p>
+                            <p>✔ Voice Assistant</p>
+                            <p>✔ Workflow System</p>
+                        </div>
+
+                        <button class="w-full py-4 rounded-2xl bg-gradient-to-r from-violet-600 to-cyan-500 font-semibold">
+                            Get Started
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="py-32 px-6 bg-white/[0.02]">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-5xl font-bold mb-6">Contact Us</h2>
+
+                <p class="text-gray-400 mb-16">
+                    Start building your next-generation AI business today.
+                </p>
+
+                <div class="grid gap-6">
+                    <input
+                        type="text"
+                        placeholder="Your Name"
+                        class="w-full p-5 rounded-2xl bg-white/5 border border-white/10 outline-none"
+                    />
+
+                    <input
+                        type="email"
+                        placeholder="Your Email"
+                        class="w-full p-5 rounded-2xl bg-white/5 border border-white/10 outline-none"
+                    />
+
+                    <textarea
+                        rows="6"
+                        placeholder="Your Message"
+                        class="w-full p-5 rounded-2xl bg-white/5 border border-white/10 outline-none"
+                    ></textarea>
+
+                    <button class="py-5 rounded-2xl bg-gradient-to-r from-violet-600 to-cyan-500 font-semibold text-lg hover:scale-[1.02] transition">
+                        Send Message
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="border-t border-white/10 py-10 px-6 text-center text-gray-500">
+            <div class="max-w-7xl mx-auto">
+                <h3 class="text-2xl font-bold text-white mb-4">Nexus AI</h3>
+                <p>© 2026 Nexus AI. All rights reserved.</p>
+            </div>
+        </footer>
     </div>
-  </section>
-
-  {/* CONTACT */}
-  <section id="contact" className="py-32 px-6 bg-white/[0.02]">
-    <div className="max-w-4xl mx-auto text-center">
-      <h2 className="text-5xl font-bold mb-6">Contact Us</h2>
-
-      <p className="text-gray-400 mb-16">
-        Start building your next-generation AI business today.
-      </p>
-
-      <div className="grid gap-6">
-        <input
-          type="text"
-          placeholder="Your Name"
-          className="w-full p-5 rounded-2xl bg-white/5 border border-white/10 outline-none"
-        />
-
-        <input
-          type="email"
-          placeholder="Your Email"
-          className="w-full p-5 rounded-2xl bg-white/5 border border-white/10 outline-none"
-        />
-
-        <textarea
-          rows="6"
-          placeholder="Your Message"
-          className="w-full p-5 rounded-2xl bg-white/5 border border-white/10 outline-none"
-        />
-
-        <button className="py-5 rounded-2xl bg-gradient-to-r from-violet-600 to-cyan-500 font-semibold text-lg hover:scale-[1.02] transition">
-          Send Message
-        </button>
-      </div>
-    </div>
-  </section>
-
-  {/* FOOTER */}
-  <footer className="border-t border-white/10 py-10 px-6 text-center text-gray-500">
-    <div className="max-w-7xl mx-auto">
-      <h3 className="text-2xl font-bold text-white mb-4">Nexus AI</h3>
-      <p>© 2026 Nexus AI. All rights reserved.</p>
-    </div>
-  </footer>
-</div>
-
-); }
+</body>
+</html>
